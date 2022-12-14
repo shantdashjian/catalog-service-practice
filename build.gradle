@@ -26,3 +26,7 @@ tasks.named('test') {
 tasks.named('bootRun') {
     jvmArgs = ["-Dspring.output.ansi.enabled=ALWAYS"]
 }
+
+bootRun {
+    systemProperty("spring.profiles.active", "testdata")
+}
